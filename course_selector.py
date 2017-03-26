@@ -77,8 +77,10 @@ while(flag):
 				flag1 = 1
 				break;
 
-		if not flag1:
+		while(not flag1):
 			sections = browser.find_element_by_xpath("//input[@value='Show More sections']")
+			if sections == None:
+				flag1 = 1
 			sections.click()
 			tds = browser.find_elements_by_tag_name("td")
 			for td in tds:
