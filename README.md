@@ -8,3 +8,19 @@ the script tested only in linux environment, you might need to tweak the code to
 
 ### Who do I talk to? ###
 alexgre@ufl.edu
+
+### if you do not want to see the real desktop use code below ###
+from pyvirtualdisplay import Display
+from selenium import webdriver
+
+display = Display(visible=0, size=(800, 600))
+display.start()
+
+# now Firefox will run in a virtual display. 
+# you will not see the browser.
+browser = webdriver.Firefox()
+browser.get('http://www.google.com')
+print browser.title
+browser.quit()
+
+display.stop()
