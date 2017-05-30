@@ -10,6 +10,7 @@ the script tested only in linux environment, you might need to tweak the code to
 alexgre@ufl.edu
 
 ### if you do not want to see the real desktop use code below ###
+```python
 from pyvirtualdisplay import Display
 from selenium import webdriver
 
@@ -22,3 +23,4 @@ print browser.title
 browser.quit()
 
 display.stop()
+```
